@@ -216,6 +216,7 @@ def ws_client(customer_id: int):
     except Exception as e:
         #traceback.print_exc()
         logger.info('Error: %s' % e)
+        time.sleep(3)
     finally:
         if ws:
             ws.close()
